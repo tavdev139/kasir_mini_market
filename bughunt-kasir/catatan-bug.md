@@ -1,6 +1,6 @@
 # Catatan Bug Hunt: Kasir Kantin STEAM
 
-**Nama tim:** KasirKu Team
+**Nama tim:** E-DALANG
 
 Buat satu entri untuk setiap bug yang ditemukan. Simpan file ini di folder `bughunt-kasir/`.
 

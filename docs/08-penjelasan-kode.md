@@ -12,7 +12,7 @@ Aturan:
 ## Bagian A: Penjelasan per anggota
 
 ### Penjelasan 1
-- **Ditulis oleh:** Saya (Pengembang Mandiri)
+- **Ditulis oleh:** Tim E-DALANG
 - **File dan fungsi:** `src/lib/kasir.js` → `hitungDiskon(total)` dan `hitungTotalAkhir(total)`
 - **Apa yang dilakukan:** 
   Fungsi ini bertugas memeriksa apakah jumlah uang belanjaan pelanggan berhak mendapatkan potongan diskon promosi atau tidak. Jika total belanja mencapai atau melebihi batas promo (Rp 100.000), fungsi menghitung 10% dari total tersebut dengan pembulatan rupiah. Selanjutnya, fungsi `hitungTotalAkhir` mengurangkan total awal dengan nominal diskon yang didapat.
@@ -25,7 +25,7 @@ Aturan:
   Jika total 0 atau bernilai minus, kondisi `total >= BATAS_DISKON` bernilai salah (`false`) sehingga sistem dengan aman mengembalikan diskon 0 rupiah.
 
 ### Penjelasan 2
-- **Ditulis oleh:** Saya (Pengembang Mandiri)
+- **Ditulis oleh:** Tim E-DALANG
 - **File dan fungsi:** `src/lib/kasir.js` → `filterTransaksi(transaksi, keyword, dari, sampai)`
 - **Apa yang dilakukan:** 
   Fungsi ini menyaring daftar seluruh transaksi berdasarkan input pencarian ID dan rentang tanggal (fitur Change Request).

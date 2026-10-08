@@ -1,6 +1,6 @@
 # Spesifikasi Produk
 
-**Nama tim:** (isi nama kamu)
+**Nama tim:** E-DALANG
 **Nama produk:** KasirKu — Aplikasi Kasir Warung Makan / Cafe
 **Alur inti yang dibangun:** Kasir memilih menu dan jumlah pesanan, sistem menghitung total tagihan dan kembalian secara otomatis.
 
