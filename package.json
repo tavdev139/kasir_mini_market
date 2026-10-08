@@ -1,0 +1,29 @@
+{
+  "name": "kasir-cafe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
+  "allowScripts": {
+    "next": true,
+    "react": true,
+    "react-dom": true,
+    "tailwindcss": true,
+    "@tailwindcss/turbopack": true
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "tailwindcss": "^4",
+    "jest": "^29",
+    "jest-environment-jsdom": "^29"
+  }
+}
