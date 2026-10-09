@@ -23,7 +23,7 @@ Aplikasi kasir berbasis web untuk warung makan dan cafe kecil. Kasir dapat memil
 
 1. Clone repositori:
    ```
-   git clone https://github.com/nama-akun/kasir-cafe.git
+   git clone https://github.com/fadlan139/kasir-cafe.git
    ```
 2. Masuk ke folder proyek:
    ```
