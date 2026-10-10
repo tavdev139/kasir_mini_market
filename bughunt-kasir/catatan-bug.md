@@ -1,4 +1,4 @@
-# Catatan Bug Hunt: Kasir Kantin STEAM
+# Catatan Bug: Kasir Kantin STEAM
 
 **Nama tim:** E-DALANG
 
