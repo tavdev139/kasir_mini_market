@@ -114,3 +114,4 @@ Hasil yang diharapkan: **20 tests passed**, 0 failed.
 | Nama | Peran |
 |---|---|
 | E-DALANG | Pengembang Aplikasi (Full-Stack) |
+"# kasir_cafe" 
