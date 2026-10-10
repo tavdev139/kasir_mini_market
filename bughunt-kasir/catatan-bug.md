@@ -1,4 +1,4 @@
-# Catatan Bug: Kasir Kantin STEAM
+# Catatan Bug Hunt: Kasir Mini Market
 
 **Nama tim:** E-DALANG
 

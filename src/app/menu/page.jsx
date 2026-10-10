@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function HalamanMenu() {
   const [daftarMenu, setDaftarMenu] = useState([]);
-  const [form, setForm] = useState({ nama: "", harga: "", kategori: "Makanan" });
+  const [form, setForm] = useState({ nama: "", harga: "", kategori: "Sembako" });
   const [editId, setEditId] = useState(null);
   const [error, setError] = useState("");
 
@@ -16,7 +16,7 @@ export default function HalamanMenu() {
 
   function simpan() {
     setError("");
-    if (!form.nama.trim()) { setError("Nama menu tidak boleh kosong."); return; }
+    if (!form.nama.trim()) { setError("Nama produk tidak boleh kosong."); return; }
     const harga = parseInt(form.harga, 10);
     if (isNaN(harga) || harga <= 0) { setError("Harga harus berupa angka lebih dari 0."); return; }
 
@@ -33,7 +33,7 @@ export default function HalamanMenu() {
 
     setDaftarMenu(updated);
     simpanMenu(updated);
-    setForm({ nama: "", harga: "", kategori: "Makanan" });
+    setForm({ nama: "", harga: "", kategori: "Sembako" });
   }
 
   function mulaiEdit(menu) {
@@ -46,42 +46,42 @@ export default function HalamanMenu() {
     const updated = daftarMenu.filter((m) => m.id !== id);
     setDaftarMenu(updated);
     simpanMenu(updated);
-    if (editId === id) { setEditId(null); setForm({ nama: "", harga: "", kategori: "Makanan" }); }
+    if (editId === id) { setEditId(null); setForm({ nama: "", harga: "", kategori: "Sembako" }); }
   }
 
   function batal() {
     setEditId(null);
-    setForm({ nama: "", harga: "", kategori: "Makanan" });
+    setForm({ nama: "", harga: "", kategori: "Sembako" });
     setError("");
   }
 
   return (
     <div className="min-h-screen bg-orange-50">
       <header className="bg-white shadow-sm px-6 py-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-orange-600">☕ KasirKu</h1>
+        <h1 className="text-xl font-bold text-orange-600">Kasir Mini Market</h1>
         <nav className="flex gap-4 text-sm font-medium text-gray-500">
           <Link href="/" className="hover:text-orange-600">Kasir</Link>
           <Link href="/riwayat" className="hover:text-orange-600">Riwayat</Link>
-          <Link href="/menu" className="text-orange-600">Kelola Menu</Link>
+          <Link href="/menu" className="text-orange-600">Kelola Barang</Link>
         </nav>
       </header>
 
       <main className="p-6 max-w-3xl mx-auto">
-        <h2 className="text-lg font-bold text-gray-800 mb-4">Kelola Menu</h2>
+        <h2 className="text-lg font-bold text-gray-800 mb-4">Kelola Barang / Produk</h2>
 
         {/* Form tambah / edit */}
         <div className="bg-white rounded-xl shadow p-4 mb-6">
           <h3 className="font-semibold text-gray-700 mb-3">
-            {editId !== null ? "✏️ Edit Menu" : "➕ Tambah Menu Baru"}
+            {editId !== null ? "Edit Produk" : "Tambah Produk Baru"}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div>
-              <label className="text-xs text-gray-500 block mb-1">Nama Menu</label>
+              <label className="text-xs text-gray-500 block mb-1">Nama Produk</label>
               <input
                 type="text"
                 value={form.nama}
                 onChange={(e) => setForm({ ...form, nama: e.target.value })}
-                placeholder="Contoh: Nasi Uduk"
+                placeholder="Contoh: Minyak Goreng 1L"
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
               />
             </div>
@@ -92,7 +92,7 @@ export default function HalamanMenu() {
                 min="1"
                 value={form.harga}
                 onChange={(e) => setForm({ ...form, harga: e.target.value })}
-                placeholder="Contoh: 15000"
+                placeholder="Contoh: 18000"
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
               />
             </div>
@@ -103,9 +103,11 @@ export default function HalamanMenu() {
                 onChange={(e) => setForm({ ...form, kategori: e.target.value })}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
               >
+                <option>Sembako</option>
                 <option>Makanan</option>
                 <option>Minuman</option>
-                <option>Snack</option>
+                <option>Kebersihan</option>
+                <option>Lainnya</option>
               </select>
             </div>
           </div>
@@ -130,7 +132,7 @@ export default function HalamanMenu() {
           <table className="w-full text-sm">
             <thead className="bg-gray-50 text-gray-500 text-xs uppercase">
               <tr>
-                <th className="text-left px-4 py-3">Nama</th>
+                <th className="text-left px-4 py-3">Nama Produk</th>
                 <th className="text-left px-4 py-3">Kategori</th>
                 <th className="text-right px-4 py-3">Harga</th>
                 <th className="px-4 py-3"></th>

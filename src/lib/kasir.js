@@ -1,18 +1,20 @@
 // src/lib/kasir.js
 // Semua logika bisnis kasir ada di sini (murni fungsi, mudah diuji)
 
-/** Daftar menu awal */
+/** Daftar produk awal minimarket */
 export const MENU_AWAL = [
-  { id: 1, nama: "Nasi Goreng", harga: 15000, kategori: "Makanan" },
-  { id: 2, nama: "Mie Goreng", harga: 13000, kategori: "Makanan" },
-  { id: 3, nama: "Ayam Bakar", harga: 25000, kategori: "Makanan" },
-  { id: 4, nama: "Soto Ayam", harga: 18000, kategori: "Makanan" },
-  { id: 5, nama: "Gado-Gado", harga: 14000, kategori: "Makanan" },
-  { id: 6, nama: "Es Teh Manis", harga: 5000, kategori: "Minuman" },
-  { id: 7, nama: "Es Jeruk", harga: 7000, kategori: "Minuman" },
-  { id: 8, nama: "Jus Alpukat", harga: 12000, kategori: "Minuman" },
-  { id: 9, nama: "Kopi Hitam", harga: 8000, kategori: "Minuman" },
-  { id: 10, nama: "Air Mineral", harga: 4000, kategori: "Minuman" },
+  { id: 1, nama: "Beras Premium 1kg", harga: 15000, kategori: "Sembako" },
+  { id: 2, nama: "Minyak Goreng 1L", harga: 18000, kategori: "Sembako" },
+  { id: 3, nama: "Gula Pasir 1kg", harga: 16000, kategori: "Sembako" },
+  { id: 4, nama: "Mie Instan Goreng", harga: 3500, kategori: "Makanan" },
+  { id: 5, nama: "Biskuit Cokelat", harga: 12000, kategori: "Makanan" },
+  { id: 6, nama: "Roti Tawar Kupas", harga: 14000, kategori: "Makanan" },
+  { id: 7, nama: "Air Mineral 600ml", harga: 4000, kategori: "Minuman" },
+  { id: 8, nama: "Teh Kemasan Botol", harga: 5000, kategori: "Minuman" },
+  { id: 9, nama: "Susu UHT 250ml", harga: 7000, kategori: "Minuman" },
+  { id: 10, nama: "Kopi Instan Box", harga: 13000, kategori: "Minuman" },
+  { id: 11, nama: "Sabun Mandi Batang", harga: 4500, kategori: "Kebersihan" },
+  { id: 12, nama: "Pasta Gigi 120g", harga: 11000, kategori: "Kebersihan" },
 ];
 
 /** Aturan bisnis: diskon 10% jika total >= Rp 100.000 */

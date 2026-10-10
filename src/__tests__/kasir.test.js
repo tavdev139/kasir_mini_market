@@ -15,7 +15,7 @@ import {
 // hitungSubtotal
 // =============================================
 describe("hitungSubtotal", () => {
-  test("U01 - subtotal normal: 2 Nasi Goreng @15000 = 30000", () => {
+  test("U01 - subtotal normal: 2 Beras Premium @15000 = 30000", () => {
     expect(hitungSubtotal(15000, 2)).toBe(30000);
   });
 
@@ -32,7 +32,7 @@ describe("hitungSubtotal", () => {
 // hitungTotal
 // =============================================
 describe("hitungTotal", () => {
-  test("U01 - total 2 item: 2x Nasi Goreng + 1x Es Teh = 35000", () => {
+  test("U01 - total 2 item: 2x Beras Premium + 1x Teh Kemasan = 35000", () => {
     const keranjang = [
       { harga: 15000, jumlah: 2 },
       { harga: 5000, jumlah: 1 },

@@ -1,8 +1,8 @@
 // src/lib/storage.js
 // Helper untuk menyimpan & membaca data dari localStorage
 
-const KEY_TRANSAKSI = "kasir_transaksi";
-const KEY_MENU = "kasir_menu";
+const KEY_TRANSAKSI = "kasir_minimarket_transaksi";
+const KEY_MENU = "kasir_minimarket_produk";
 
 import { MENU_AWAL } from "./kasir";
 

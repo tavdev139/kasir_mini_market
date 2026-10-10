@@ -27,11 +27,11 @@ export default function HalamanRiwayat() {
     <div className="min-h-screen bg-orange-50">
       {/* Header */}
       <header className="bg-white shadow-sm px-6 py-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-orange-600">☕ KasirKu</h1>
+        <h1 className="text-xl font-bold text-orange-600">Kasir Mini Market</h1>
         <nav className="flex gap-4 text-sm font-medium text-gray-500">
           <Link href="/" className="hover:text-orange-600">Kasir</Link>
           <Link href="/riwayat" className="text-orange-600">Riwayat</Link>
-          <Link href="/menu" className="hover:text-orange-600">Kelola Menu</Link>
+          <Link href="/menu" className="hover:text-orange-600">Kelola Barang</Link>
         </nav>
       </header>
 

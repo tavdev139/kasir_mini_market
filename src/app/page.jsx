@@ -72,7 +72,7 @@ export default function HalamanKasir() {
   function handleCheckout() {
     setError("");
     if (keranjang.length === 0) {
-      setError("Pilih minimal 1 menu sebelum checkout.");
+      setError("Pilih minimal 1 barang sebelum checkout.");
       return;
     }
     if (uangBayar < totalAkhir) {
@@ -159,11 +159,11 @@ export default function HalamanKasir() {
     <div className="min-h-screen bg-orange-50">
       {/* Header */}
       <header className="bg-white shadow-sm px-6 py-4 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-orange-600">☕ KasirKu</h1>
+        <h1 className="text-xl font-bold text-orange-600">Kasir Mini Market</h1>
         <nav className="flex gap-4 text-sm font-medium text-gray-500">
           <Link href="/" className="text-orange-600">Kasir</Link>
           <Link href="/riwayat" className="hover:text-orange-600">Riwayat</Link>
-          <Link href="/menu" className="hover:text-orange-600">Kelola Menu</Link>
+          <Link href="/menu" className="hover:text-orange-600">Kelola Barang</Link>
         </nav>
       </header>
 
@@ -198,13 +198,13 @@ export default function HalamanKasir() {
         {/* Panel kanan: Keranjang */}
         <div className="w-80 bg-white shadow-lg flex flex-col">
           <div className="p-4 border-b">
-            <h2 className="font-bold text-gray-800">🛒 Pesanan</h2>
+            <h2 className="font-bold text-gray-800">Keranjang Belanja</h2>
           </div>
 
           {/* Daftar item keranjang */}
           <div className="flex-1 overflow-y-auto px-4">
             {keranjang.length === 0 ? (
-              <p className="text-center text-gray-400 text-sm mt-8">Belum ada item dipilih</p>
+              <p className="text-center text-gray-400 text-sm mt-8">Belum ada barang dipilih</p>
             ) : (
               keranjang.map((item) => (
                 <ItemKeranjang

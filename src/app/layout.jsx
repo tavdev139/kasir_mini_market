@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "KasirKu — Aplikasi Kasir Warung Makan",
-  description: "Aplikasi kasir sederhana untuk warung makan dan cafe",
+  title: "Kasir Mini Market — Sistem Kasir Minimarket",
+  description: "Aplikasi kasir mini market untuk pencatatan transaksi penjualan barang",
 };
 
 export default function RootLayout({ children }) {

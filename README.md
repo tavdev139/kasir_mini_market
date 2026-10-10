@@ -1,15 +1,15 @@
-# KasirKu — Aplikasi Kasir Warung Makan / Cafe
+# Kasir Mini Market — Aplikasi Kasir Minimarket
 
-Aplikasi kasir berbasis web untuk warung makan dan cafe kecil. Kasir dapat memilih menu, menghitung total tagihan dan kembalian secara otomatis, serta melihat riwayat transaksi.
+Aplikasi kasir berbasis web untuk minimarket dan toko kelontong. Kasir dapat memilih produk barang, menghitung total tagihan dan kembalian secara otomatis, serta melihat riwayat transaksi.
 
 ## Alur Inti
 
-1. Kasir membuka halaman utama dan melihat daftar menu
-2. Kasir memilih menu dan mengatur jumlah pesanan
-3. Sistem menghitung total, menerapkan diskon otomatis jika total ≥ Rp 100.000
-4. Kasir memasukkan uang bayar, sistem menghitung kembalian
-5. Kasir klik "Bayar Sekarang" dan transaksi tersimpan
-6. Kasir dapat melihat riwayat transaksi, mencari, filter, dan ekspor CSV
+1. Kasir membuka halaman utama dan melihat daftar produk barang minimarket
+2. Kasir memilih produk dan mengatur jumlah barang yang dibeli
+3. Sistem menghitung total belanja, menerapkan diskon otomatis jika total >= Rp 100.000
+4. Kasir memasukkan nominal uang bayar, sistem menghitung kembalian secara otomatis
+5. Kasir menekan tombol "Bayar Sekarang" dan transaksi tersimpan
+6. Kasir dapat melihat riwayat transaksi, mencari nomor transaksi, memfilter rentang tanggal, dan ekspor data ke CSV
 
 ## Cara Menjalankan (How to Run)
 
@@ -41,8 +41,8 @@ Aplikasi kasir berbasis web untuk warung makan dan cafe kecil. Kasir dapat memil
 
 ### Jika terjadi masalah
 
-- **Port sudah dipakai**: ganti port dengan `npm run dev -- -p 3001` lalu buka http://localhost:3001
-- **Error `npm install`**: pastikan menggunakan Node.js versi 18+, cek dengan `node --version`
+- Port sudah dipakai: ganti port dengan `npm run dev -- -p 3001` lalu buka http://localhost:3001
+- Error saat install: pastikan menggunakan Node.js versi 18+, cek dengan `node --version`
 
 ## Cara Menjalankan Pengujian
 
@@ -50,29 +50,29 @@ Aplikasi kasir berbasis web untuk warung makan dan cafe kecil. Kasir dapat memil
 npx jest --no-coverage
 ```
 
-Hasil yang diharapkan: **20 tests passed**, 0 failed.
+Hasil yang diharapkan: 20 tests passed, 0 failed.
 
 ## Tangkapan Layar Alur Inti
 
-1. Halaman Kasir (Daftar Menu): ![Halaman Kasir](docs/bukti/langkah-1-halaman-kasir.png)
+1. Halaman Kasir (Daftar Produk): ![Halaman Kasir](docs/bukti/langkah-1-halaman-kasir.png)
 2. Keranjang & Perhitungan Tagihan: ![Keranjang](docs/bukti/langkah-2-keranjang-pesanan.png)
 3. Modal Struk Transaksi Berhasil: ![Struk](docs/bukti/langkah-3-struk-transaksi.png)
 4. Riwayat Transaksi & Fitur Filter/CSV: ![Riwayat](docs/bukti/langkah-4-riwayat-transaksi.png)
-5. Halaman Kelola Menu: ![Kelola Menu](docs/bukti/langkah-5-kelola-menu.png)
+5. Halaman Kelola Barang: ![Kelola Barang](docs/bukti/langkah-5-kelola-menu.png)
 
 ## Fitur
 
-- ✅ Daftar menu dengan filter kategori (Makanan / Minuman / Snack)
-- ✅ Keranjang pesanan: tambah, kurangi, hapus item
-- ✅ Hitung total tagihan otomatis
-- ✅ Diskon 10% otomatis jika total ≥ Rp 100.000
-- ✅ Hitung kembalian otomatis
-- ✅ Validasi input (bayar kurang, keranjang kosong)
-- ✅ Riwayat transaksi tersimpan di browser (localStorage)
-- ✅ Pencarian riwayat berdasarkan ID transaksi
-- ✅ Filter riwayat berdasarkan rentang tanggal
-- ✅ Ekspor riwayat ke file CSV
-- ✅ Kelola menu: tambah, edit, hapus menu
+- Daftar produk dengan filter kategori (Sembako, Makanan, Minuman, Kebersihan)
+- Keranjang belanja: tambah, kurangi, dan hapus item
+- Perhitungan total tagihan belanja otomatis
+- Diskon 10% otomatis jika total belanja >= Rp 100.000
+- Hitung uang kembalian otomatis
+- Validasi input (uang bayar kurang, keranjang belanja kosong)
+- Riwayat transaksi tersimpan di peramban (localStorage)
+- Pencarian transaksi berdasarkan ID transaksi
+- Filter transaksi berdasarkan rentang tanggal
+- Ekspor data transaksi ke file format CSV
+- Kelola produk barang: tambah, ubah, dan hapus barang
 
 ## Batasan yang Diketahui
 

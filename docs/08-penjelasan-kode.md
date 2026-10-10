@@ -17,9 +17,9 @@ Aturan:
 - **Apa yang dilakukan:** 
   Fungsi ini bertugas memeriksa apakah jumlah uang belanjaan pelanggan berhak mendapatkan potongan diskon promosi atau tidak. Jika total belanja mencapai atau melebihi batas promo (Rp 100.000), fungsi menghitung 10% dari total tersebut dengan pembulatan rupiah. Selanjutnya, fungsi `hitungTotalAkhir` mengurangkan total awal dengan nominal diskon yang didapat.
 - **Kenapa dibuat seperti ini:** 
-  Saya memisahkannya menjadi fungsi murni (*pure function*) dan memakai konstanta `BATAS_DISKON` serta `PERSEN_DISKON`. Dengan cara ini, kode sangat fleksibel jika sewaktu-waktu pemilik cafe ingin mengubah syarat promo tanpa membongkar tampilan UI.
+  Saya memisahkannya menjadi fungsi murni (*pure function*) dan memakai konstanta `BATAS_DISKON` serta `PERSEN_DISKON`. Dengan cara ini, kode sangat fleksibel jika sewaktu-waktu pemilik minimarket ingin mengubah syarat promo tanpa membongkar tampilan UI.
 - **Contoh:** 
-  - Jika pelanggan memesan 7 porsi Nasi Goreng dengan subtotal Rp 105.000, `hitungDiskon(105000)` mengembalikan `10500` (karena 105.000 ≥ 100.000). Total akhirnya menjadi `Rp 94.500`.
+  - Jika pelanggan membeli 7 bungkus Beras Premium dengan subtotal Rp 105.000, `hitungDiskon(105000)` mengembalikan `10500` (karena 105.000 >= 100.000). Total akhirnya menjadi `Rp 94.500`.
   - Jika belanjaan hanya Rp 97.000, fungsi mengembalikan `0` karena belum mencapai batas minimal.
 - **Jika input salah atau kosong:** 
   Jika total 0 atau bernilai minus, kondisi `total >= BATAS_DISKON` bernilai salah (`false`) sehingga sistem dengan aman mengembalikan diskon 0 rupiah.
