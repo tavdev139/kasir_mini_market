@@ -23,11 +23,11 @@ Aplikasi kasir berbasis web untuk minimarket dan toko kelontong. Kasir dapat mem
 
 1. Clone repositori:
    ```
-   git clone https://github.com/fadlan139/kasir-cafe.git
+   git clone https://github.com/tavdev139/kasir_mini_market.git
    ```
 2. Masuk ke folder proyek:
    ```
-   cd kasir-cafe
+   cd kasir_mini_market
    ```
 3. Install dependensi:
    ```
