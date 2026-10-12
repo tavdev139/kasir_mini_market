@@ -99,6 +99,16 @@ export default function HalamanRiwayat() {
                   <div>
                     <p className="font-bold text-gray-800 text-sm">{trx.id}</p>
                     <p className="text-xs text-gray-400">{formatWaktu(trx.waktu)}</p>
+                    {/* Badge metode bayar */}
+                    <span className={`inline-block mt-1 text-xs font-semibold px-2 py-0.5 rounded-full ${
+                      !trx.metodeBayar || trx.metodeBayar === "Tunai"
+                        ? "bg-green-100 text-green-700"
+                        : trx.metodeBayar === "QRIS"
+                        ? "bg-blue-100 text-blue-700"
+                        : "bg-purple-100 text-purple-700"
+                    }`}>
+                      {trx.metodeBayar || "Tunai"}
+                    </span>
                   </div>
                   <div className="text-right">
                     <p className="font-bold text-orange-600">{formatRupiah(trx.totalAkhir)}</p>
@@ -114,9 +124,15 @@ export default function HalamanRiwayat() {
                     </span>
                   ))}
                 </div>
-                <div className="mt-2 text-xs text-gray-500 flex gap-4">
-                  <span>Bayar: {formatRupiah(trx.bayar)}</span>
-                  <span>Kembalian: {formatRupiah(trx.kembalian)}</span>
+                <div className="mt-2 text-xs text-gray-500 flex gap-4 flex-wrap">
+                  {(!trx.metodeBayar || trx.metodeBayar === "Tunai") ? (
+                    <>
+                      <span>Bayar: {formatRupiah(trx.bayar)}</span>
+                      <span>Kembalian: {formatRupiah(trx.kembalian)}</span>
+                    </>
+                  ) : (
+                    <span>Ref: {trx.nomorReferensi || "-"}</span>
+                  )}
                 </div>
               </div>
             ))}

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function HalamanMenu() {
   const [daftarMenu, setDaftarMenu] = useState([]);
-  const [form, setForm] = useState({ nama: "", harga: "", kategori: "Sembako" });
+  const [form, setForm] = useState({ nama: "", harga: "", kategori: "Alat Tulis" });
   const [editId, setEditId] = useState(null);
   const [error, setError] = useState("");
 
@@ -33,7 +33,7 @@ export default function HalamanMenu() {
 
     setDaftarMenu(updated);
     simpanMenu(updated);
-    setForm({ nama: "", harga: "", kategori: "Sembako" });
+    setForm({ nama: "", harga: "", kategori: "Alat Tulis" });
   }
 
   function mulaiEdit(menu) {
@@ -46,12 +46,12 @@ export default function HalamanMenu() {
     const updated = daftarMenu.filter((m) => m.id !== id);
     setDaftarMenu(updated);
     simpanMenu(updated);
-    if (editId === id) { setEditId(null); setForm({ nama: "", harga: "", kategori: "Sembako" }); }
+    if (editId === id) { setEditId(null); setForm({ nama: "", harga: "", kategori: "Alat Tulis" }); }
   }
 
   function batal() {
     setEditId(null);
-    setForm({ nama: "", harga: "", kategori: "Sembako" });
+    setForm({ nama: "", harga: "", kategori: "Alat Tulis" });
     setError("");
   }
 
@@ -81,7 +81,7 @@ export default function HalamanMenu() {
                 type="text"
                 value={form.nama}
                 onChange={(e) => setForm({ ...form, nama: e.target.value })}
-                placeholder="Contoh: Minyak Goreng 1L"
+                placeholder="Contoh: Buku Tulis B5"
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
               />
             </div>
@@ -92,7 +92,7 @@ export default function HalamanMenu() {
                 min="1"
                 value={form.harga}
                 onChange={(e) => setForm({ ...form, harga: e.target.value })}
-                placeholder="Contoh: 18000"
+                placeholder="Contoh: 5000"
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
               />
             </div>
@@ -103,10 +103,10 @@ export default function HalamanMenu() {
                 onChange={(e) => setForm({ ...form, kategori: e.target.value })}
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-orange-400 focus:outline-none"
               >
-                <option>Sembako</option>
-                <option>Makanan</option>
+                <option>Alat Tulis</option>
+                <option>Makanan Ringan</option>
                 <option>Minuman</option>
-                <option>Kebersihan</option>
+                <option>Perlengkapan Siswa</option>
                 <option>Lainnya</option>
               </select>
             </div>

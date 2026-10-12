@@ -1,20 +1,25 @@
 // src/lib/kasir.js
 // Semua logika bisnis kasir ada di sini (murni fungsi, mudah diuji)
 
-/** Daftar produk awal minimarket */
+/** Daftar produk awal minimarket sekolah / koperasi sekolah */
 export const MENU_AWAL = [
-  { id: 1, nama: "Beras Premium 1kg", harga: 15000, kategori: "Sembako" },
-  { id: 2, nama: "Minyak Goreng 1L", harga: 18000, kategori: "Sembako" },
-  { id: 3, nama: "Gula Pasir 1kg", harga: 16000, kategori: "Sembako" },
-  { id: 4, nama: "Mie Instan Goreng", harga: 3500, kategori: "Makanan" },
-  { id: 5, nama: "Biskuit Cokelat", harga: 12000, kategori: "Makanan" },
-  { id: 6, nama: "Roti Tawar Kupas", harga: 14000, kategori: "Makanan" },
-  { id: 7, nama: "Air Mineral 600ml", harga: 4000, kategori: "Minuman" },
-  { id: 8, nama: "Teh Kemasan Botol", harga: 5000, kategori: "Minuman" },
-  { id: 9, nama: "Susu UHT 250ml", harga: 7000, kategori: "Minuman" },
-  { id: 10, nama: "Kopi Instan Box", harga: 13000, kategori: "Minuman" },
-  { id: 11, nama: "Sabun Mandi Batang", harga: 4500, kategori: "Kebersihan" },
-  { id: 12, nama: "Pasta Gigi 120g", harga: 11000, kategori: "Kebersihan" },
+  { id: 1, nama: "Buku Tulis B5", harga: 5000, kategori: "Alat Tulis" },
+  { id: 2, nama: "Pulpen Gel Hitam", harga: 4000, kategori: "Alat Tulis" },
+  { id: 3, nama: "Pensil 2B", harga: 3000, kategori: "Alat Tulis" },
+  { id: 4, nama: "Penghapus Pensil", harga: 2500, kategori: "Alat Tulis" },
+  { id: 5, nama: "Penggaris 30cm", harga: 3500, kategori: "Alat Tulis" },
+  { id: 6, nama: "Tip-Ex Kertas Correction", harga: 8000, kategori: "Alat Tulis" },
+  { id: 7, nama: "Roti Cokelat Keju", harga: 6000, kategori: "Makanan Ringan" },
+  { id: 8, nama: "Biskuit Cokelat", harga: 8500, kategori: "Makanan Ringan" },
+  { id: 9, nama: "Wafer Cokelat", harga: 4000, kategori: "Makanan Ringan" },
+  { id: 10, nama: "Keripik Singkong", harga: 5000, kategori: "Makanan Ringan" },
+  { id: 11, nama: "Air Mineral 600ml", harga: 3500, kategori: "Minuman" },
+  { id: 12, nama: "Susu Kotak UHT 200ml", harga: 6000, kategori: "Minuman" },
+  { id: 13, nama: "Teh Kotak Melati", harga: 4500, kategori: "Minuman" },
+  { id: 14, nama: "Jus Buah Kemasan", harga: 7000, kategori: "Minuman" },
+  { id: 15, nama: "Tisu Saku", harga: 3000, kategori: "Perlengkapan Siswa" },
+  { id: 16, nama: "Kaos Kaki Putih Polos", harga: 12000, kategori: "Perlengkapan Siswa" },
+  { id: 17, nama: "Dasi Seragam Sekolah", harga: 15000, kategori: "Perlengkapan Siswa" },
 ];
 
 /** Aturan bisnis: diskon 10% jika total >= Rp 100.000 */
